@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "youtube-transcript-docker": {
+      "command": "docker",
+      "args": ["run", "--rm", "-i", "youtube-transcript-mcp"],
+      "env": {}
+    }
+  }
+} 

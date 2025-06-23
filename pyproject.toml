@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "youtube-transcript-mcp"
+version = "0.1.0"
+description = "A Model Context Protocol server that extracts transcripts from YouTube videos"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+# Core MCP dependencies
+mcp = ">=0.9.0"
+# YouTube transcript extraction
+youtube-transcript-api = ">=0.6.2"
+# Additional utilities (optional)
+requests = ">=2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+black = "^23.0.0"
+flake8 = "^6.0.0"
+mypy = "^1.0.0"
+
+# Removed scripts section since the module doesn't have a main function
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true 

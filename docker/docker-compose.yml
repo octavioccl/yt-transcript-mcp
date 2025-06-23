@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  youtube-transcript-mcp:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: youtube-transcript-mcp-server
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MCP_TRANSPORT=stdio
+    profiles:
+      - default
+
+  # Alternative service with HTTP transport (if you want to modify the server)
+  youtube-transcript-mcp-http:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: youtube-transcript-mcp-server-http
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MCP_TRANSPORT=http
+    profiles:
+      - http 

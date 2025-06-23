@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "youtube-transcript": {
+      "command": "poetry",
+      "args": ["run", "python", "src/youtube_transcript_mcp_server.py"],
+      "env": {}
+    }
+  }
+} 

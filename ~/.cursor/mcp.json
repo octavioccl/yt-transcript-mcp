@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "youtube-transcript": {
+      "command": "/Users/octavioccl/Github/yt-transcript-mcp/.venv/bin/python",
+      "args": ["/Users/octavioccl/Github/yt-transcript-mcp/youtube_transcript_mcp_server.py"],
+      "env": {}
+    }
+  }
+} 
